@@ -101,7 +101,8 @@ regardless of the URL from which they are loaded.
     [integrity metadata][] to the `link` element included on her page:
 
         <link rel="stylesheet" href="https://site53.cdn.net/style.css"
-              integrity="type:text/css sha256-SDfwewFAE...wefjijfE">
+              integrity="type:text/css sha256-SDfwewFAE...wefjijfE"
+              crossorigin="anonymous">
     {:.example.highlight}
 
 *   An author wants to include JavaScript provided by a third-party
@@ -112,7 +113,8 @@ regardless of the URL from which they are loaded.
 
         <script src="https://analytics-r-us.com/v1.0/include.js"
                 integrity="type:application/javascript
-                           sha256-SDfwewFAE...wefjijfE"></script>
+                           sha256-SDfwewFAE...wefjijfE"
+                crossorigin="anonymous"></script>
     {:.example.highlight}
 
 *   A user agent wishes to ensure that pieces of its UI which are rendered via
@@ -266,7 +268,7 @@ Authors may choose to specify both, for example:
        integrity="type:application/javascript
           sha256-+MO/YqmqPm/BYZwlDkir51GTc9Pt9BvmLrXcRRma8u8=
           sha512-rQw3wx1psxXzqB8TyM3nAQlK2RcluhsNwxmcqXE2YbgoDW735o8TPmIR4uWpoxUERddvFwjgRSGw7gNPCwuvJg==
-        "></script>
+        " crossorigin="anonymous"></script>
 
 In this case, the user agent will choose the strongest hash function in the
 list, and use that metadata to validate the resource (as described below in
